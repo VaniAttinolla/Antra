@@ -1,26 +1,28 @@
-package assignment_exception;
+package assignment2;
 
 public class Question7 {
-	  void f1()
-	     {
-	         try
-	         {
-	             String s="sathya Technologies";
-	             System.out.println(s.charAt(15));
-	         }
-	         catch(ArrayIndexOutOfBoundsException ae)
-	         {
-	             System.err.println(ae);
-	         }
-	         catch(StringIndexOutOfBoundsException se)
-	         {
-	             System.err.println(se.toString());
-	         }
-	     }
-	  public static void main(String[] args) {
-		Question7 q= new Question7();
-		q.f1();//ans:g
+	public static void main(String[] args)
+	{ 
+	try {
+	 method();
+	 System.out.println("After the method call");
+	 }
+	catch (StringIndexOutOfBoundsException se) {
+	 System.out.println("StringIndexOutOfBoundsException");
+	}
+	catch (RuntimeException ex) {
+	 System.out.println("RuntimeException");
+	}
+	catch (Exception e) {
+	 System.out.println("Exception");
+	 }
+	}
+	static void method() throws Exception {
+	String str = "Hello";
+	char ch = str.charAt(5);
+	System.out.println(ch);
+	 }// ans:StringIndexOutOfBoundsException.
 	}
 
 
-}
+

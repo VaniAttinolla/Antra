@@ -1,26 +1,23 @@
-package assignment_exception;
+package assignment2;
 
 public class Question9 {
-	   void f1()
-	     {
-	         try
-	         {
-	             int x=10,y=8,z;
-	             z=x+y;
-	         }
-	         catch(Exception e)
-	         {
-	             System.err.println(e);
-	         }
-	         finally
-	         {
-	             System.err.println( );
-	         }
-	     }
-	   public static void main(String[] args) {
-		Question8 q=new Question8();
-		q.f1();//ans : z can not be local variable 
+	public static void main(String[] args) throws Exception
+	{ 
+	try {
+	 System.out.println("ABC");
+	 int a = 5, b = 10, c = 5;
+	 a += 5;
+	 b -= a + c;
+	 int x = (a + b)/(b + c);
+	 System.out.println(x);
+	System.exit(0);
 	}
-
+	catch(ArithmeticException ae){
+	 System.out.println("PQR");
+	}
+	finally{
+	 System.out.println("XYZ");
+	}
+	 }
 
 }

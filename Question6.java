@@ -1,23 +1,23 @@
-package assignment_exception;
+package assignment2;
 
 public class Question6 {
-	  void f1()
-	     {
-	         try
-	         {
-	             int x=10,y=0,z;
-	             z=x/y;
-	         }
-	         finally
-	         {
-	             System.err.println("hello");
-	         }
-	     }
-	  public static void main(String[] args) {
-		Question6 q=new Question6();
-		q.f1();//ans: giving 0 print hello and Arithmetic Exception 
-		       // and giving 2 print hello
-	}
+	public static void main(String[] args)
+	{ 
+	try {
+	 int[] list = new int[10];
+	 System.out.println("list[10] is " + list[10]);
+	 }
+	catch (ArithmeticException ex) {
+	 System.out.println("ArithmeticException");
+	 }
+	catch (RuntimeException ex) {
+	 System.out.println("RuntimeException");
+	 }
+	catch (Exception ex) {
+	 System.out.println("Exception");
+	 } 
+	 }// ans: ArrayOutOfBounds Exception is came but is child class of runtime exception class.
+	
 
 
 }

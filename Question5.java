@@ -1,24 +1,24 @@
-package assignment_exception;
+package assignment2;
 
 public class Question5 {
-	  void f1()
-	     {
-	         try
-	         {
-	             int x=10,y=0,z;
-	             int a[ ]={12,35,8,46};
-	             System.out.println(a[6]);
-	             z=x/y;
-	         }
-	         catch(Exception e)
-	         {    
-	            System.err.println(e.getMessage());     
-	         }     
-	     }
-	  public static void main(String[] args) {
-		Question5 q1=new Question5();
-		q1.f1();//ans: 6 because we have print message
+	public static void main(String[] args)
+	{ 
+	try 
+	{ 
+	 int[] list = new int[5];
+	 System.out.println(list[5]);
+	 } 
+	catch(StringIndexOutOfBoundsException e) 
+	{
+	try {
+	 System.out.println("ABC");
+	 int x = 10/0;
 	}
+	catch(ArithmeticException ae){
+	 } 
+	}
+	System.out.println("ABC"); 
+	 }//ans:throw the ArrayOutOfboundException.
 
 
 }

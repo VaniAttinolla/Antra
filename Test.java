@@ -1,16 +1,13 @@
-package oops;
+package assignment2;
 
-public interface Test {
-	void talk();
-	void walk();
-
-}
- class Sample implements Test{
- public	void talk()
+public class Test {
+	public static void main(String[] args) 
 	{
-		System.out.println("Talking with my friends");
-	}
- public void walk() {
-	 System.out.println("Walking towards the East");
- }
+	 int x = 10;
+	 int y = 0;
+	 int z = x / y;
+	 System.out.println(z);
+	 }// arithmetic Exception is unchecked exception it inherits from runtime exception class.
+
+
 }
